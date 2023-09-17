@@ -8,7 +8,13 @@ export default function ProductDetail(props: {
   };
 }): JSX.Element {
   const { product, description, price } = props.product;
+
   const [input, setInput] = useState(0);
+
+  interface btntype {
+    input: number;
+    setInput: React.Dispatch<React.SetStateAction<number>>;
+  }
 
   function increment(): btntype {
     if (input >= 5) {
@@ -16,14 +22,14 @@ export default function ProductDetail(props: {
     } else {
       setInput(input + 1);
     }
-    return { input, setInput }; // Return the updated values
+    return { input, setInput };
   }
 
   function decrement(): btntype {
     if (input > 0) {
       setInput(input - 1);
     }
-    return { input, setInput }; // Return the updated values
+    return { input, setInput };
   }
 
   return (
@@ -56,9 +62,4 @@ export default function ProductDetail(props: {
       </div>
     </>
   );
-}
-
-interface btntype {
-  input: number;
-  setInput: number;
 }

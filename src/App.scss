@@ -241,8 +241,25 @@
   }
 
   .carousel .slide img {
-    width: 50vw !important;
+    width: 70vw !important;
     vertical-align: top;
     border: 0;
+  }
+
+  .product {
+    display: grid;
+    grid-template-rows: auto auto auto auto;
+    row-gap: 3vw;
+    align-items: flex-start;
+  }
+
+  .product__desc,
+  .product__brand {
+    font-size: 2.25vw;
+  }
+
+  .product__name,
+  .product__newprice {
+    font-size: 5vw;
   }
 }
