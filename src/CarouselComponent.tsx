@@ -10,7 +10,17 @@ const CarouselComponent = ({
 
   return (
     <div className="box">
-      <Carousel showStatus={false} showArrows={true} useKeyboardArrows={true}>
+      <Carousel
+        showIndicators={false}
+        showStatus={false}
+        showArrows={false}
+        useKeyboardArrows={true}
+        infiniteLoop={true}
+        interval={5000}
+        stopOnHover={true}
+        emulateTouch={true}
+        swipeable={true}
+      >
         {imageUrls.map((imageUrl, index) => (
           <div className="carousel__img" key={index}>
             <img

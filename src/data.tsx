@@ -10,13 +10,13 @@ export const data = {
       },
       images: {
         first:
-          "https://cdn.salla.sa/qDrqv/TkmBubD2vQZchs6I4h8hsFwir1fpL2pDztznJOR7.jpg",
+          "https://nb.scene7.com/is/image/NB/ms237cn_nb_02_i?$dw_detail_main_lg$&bgc=f1f1f1&layer=1&bgcolor=f1f1f1&blendMode=mult&scale=10&wid=1600&hei=1600",
         second:
-          "https://cdn.salla.sa/qDrqv/F16geMv72OHJqOH7Ww7CYw9zoSM6HMncWVOJyYAb.jpg",
+          "https://nb.scene7.com/is/image/NB/ms237cn_nb_05_i?$dw_detail_main_lg$&bgc=f1f1f1&layer=1&bgcolor=f1f1f1&blendMode=mult&scale=10&wid=1600&hei=1600",
         third:
-          "https://cdn.salla.sa/qDrqv/A4gDarYBhyBSm87eKMNePvrO9JzZZgNtb833WVIe.jpg",
+          "https://nb.scene7.com/is/image/NB/ms237cn_nb_07_i?$dw_detail_main_lg$&bgc=f1f1f1&layer=1&bgcolor=f1f1f1&blendMode=mult&scale=10&wid=1600&hei=1600",
         forth:
-          "https://cdn.salla.sa/qDrqv/Zd68a8bmoAIqgLJDvs2wPgg7JoKHUW6uA2d6i6ee.jpg",
+          "https://nb.scene7.com/is/image/NB/ms237cn_nb_06_i?$dw_detail_main_lg$&bgc=f1f1f1&layer=1&bgcolor=f1f1f1&blendMode=mult&scale=10&wid=1600&hei=1600",
       },
     },
   ],

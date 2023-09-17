@@ -18,7 +18,7 @@
 .product-main {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  column-gap: 100px;
+  column-gap: 4vw;
   max-width: 800px;
 }
 
@@ -44,8 +44,8 @@
 .product {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 0.25fr 0.8fr 1fr 1fr;
-  row-gap: 20px;
+  grid-template-rows: 0.25fr 0.8fr 0.6fr 1fr;
+  row-gap: 2vw;
   text-align: left;
   align-items: flex-start;
   color: black;
@@ -130,11 +130,19 @@
     border: 1px solid black;
   }
 
+  .product_quantity {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+  }
+
   &--incdec {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    gap: 10%;
+    width: 100px;
+    gap: 10px;
   }
 }
 
@@ -161,10 +169,80 @@
 /*===================*/ /*===================*/
 /*===================*/ /*===================*/
 
+.carousel__img img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Adjust arrow size for small screens */
+@media (max-width: 768px) {
+  .carousel.carousel-slider .control-arrow {
+    color: black;
+  }
+
+  .carousel.carousel-slider .control-arrow:before {
+    font-size: 10px;
+  }
+}
+
 .carousel .slide {
   min-width: 100%;
-  height: 38vh;
+  height: 100%;
   margin: 0;
   position: relative;
   text-align: center;
+}
+
+.control-prev {
+  background-color: red;
+}
+
+.carousel .slide img {
+  width: 50vw !important;
+  vertical-align: top;
+  border: 0;
+}
+
+.carousel .thumb.selected,
+.carousel .thumb:hover {
+  border: 1px solid #000000 !important;
+}
+
+.carousel .control-next.control-arrow:before {
+  border-left: 8px solid #000000 !important;
+  transition: 0.01s all ease-in-out !important;
+}
+
+.carousel .control-prev.control-arrow:before {
+  border-right: 8px solid #000000 !important;
+  transition: 0.01s all ease-in-out !important;
+}
+
+.carousel.carousel-slider .control-arrow:hover {
+  background: none !important;
+}
+
+.carousel .thumb {
+  width: 80vw;
+}
+
+/*===================*/ /*===================*/
+/*===================*/ /*===================*/
+/*               Media Queries               */
+/*===================*/ /*===================*/
+/*===================*/ /*===================*/
+
+@media screen and (max-width: 768px) {
+  .product-main {
+    display: grid;
+    grid-template-columns: 1fr;
+    column-gap: 5vw;
+    max-width: 800px;
+  }
+
+  .carousel .slide img {
+    width: 50vw !important;
+    vertical-align: top;
+    border: 0;
+  }
 }

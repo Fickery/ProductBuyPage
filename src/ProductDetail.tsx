@@ -1,4 +1,4 @@
-// import products from "./data";
+import { useState } from "react";
 
 export default function ProductDetail(props: {
   product: {
@@ -8,6 +8,23 @@ export default function ProductDetail(props: {
   };
 }): JSX.Element {
   const { product, description, price } = props.product;
+  const [input, setInput] = useState(0);
+
+  function increment(): btntype {
+    if (input >= 5) {
+      alert("Begone Scalpers!");
+    } else {
+      setInput(input + 1);
+    }
+    return { input, setInput }; // Return the updated values
+  }
+
+  function decrement(): btntype {
+    if (input > 0) {
+      setInput(input - 1);
+    }
+    return { input, setInput }; // Return the updated values
+  }
 
   return (
     <>
@@ -25,9 +42,13 @@ export default function ProductDetail(props: {
 
         <div className="product__btns">
           <div className="product__btns--incdec">
-            <button className="product__btns inc">+</button>
-            <span>0</span>
-            <button className="product__btns dec">-</button>
+            <button onClick={increment} className="product__btns inc">
+              +
+            </button>
+            <span className="product_quantity">{input}</span>
+            <button onClick={decrement} className="product__btns dec">
+              -
+            </button>
           </div>
 
           <button className="product__btns--cartbtn">ADD TO CART</button>
@@ -35,4 +56,9 @@ export default function ProductDetail(props: {
       </div>
     </>
   );
+}
+
+interface btntype {
+  input: number;
+  setInput: number;
 }
