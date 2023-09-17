@@ -22,13 +22,15 @@ export default function ProductDetail(props: {
           </div>
           <p className="product__oldprice">{price.oldprice}</p>
         </div>
+
         <div className="product__btns">
-          <div className="product__incdec-main">
-            <button className="product__btns product__incdec">+</button>
+          <div className="product__btns--incdec">
+            <button className="product__btns inc">+</button>
             <span>0</span>
-            <button className="product__btns product__incdec">-</button>
+            <button className="product__btns dec">-</button>
           </div>
-          <button className="product__btn">ADD TO CART</button>
+
+          <button className="product__btns--cartbtn">ADD TO CART</button>
         </div>
       </div>
     </>
